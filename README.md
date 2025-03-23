@@ -87,5 +87,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📬 Contact
 
-For questions or suggestions, contact us at [[email](mailto\:richardoficial2020@gmail.com)].
- 
+For questions or suggestions, contact us at [[richardoficial2020@gmail.com](mailto\:richardoficial2020@gmail.com)].

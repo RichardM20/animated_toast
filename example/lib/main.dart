@@ -1,4 +1,4 @@
-import 'package:animated_toast/animated_toast_package.dart';
+import 'package:animated_toast/animated_toast.dart';
 import 'package:flutter/material.dart';
 
 void main() {

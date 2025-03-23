@@ -1,4 +1,4 @@
-import 'package:animated_toast/src/animated_toast.dart';
+import 'package:animated_toast/src/animated_toast_service.dart';
 import 'package:flutter/material.dart';
 
 class ToastAnimationController {

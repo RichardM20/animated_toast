@@ -1,4 +1,4 @@
-import 'package:animated_toast/src/animated_toast.dart';
+import 'package:animated_toast/src/animated_toast_service.dart';
 import 'package:animated_toast/src/controllers/animated_toast_controller.dart';
 import 'package:animated_toast/src/models/toast_decoration_styles.dart';
 import 'package:animated_toast/src/models/toast_duration.dart';

@@ -1,4 +1,4 @@
-import 'package:animated_toast/animated_toast_package.dart';
+import 'package:animated_toast/animated_toast.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text('Animated Toast Examples')),
         body: ToastExampleScreen(),

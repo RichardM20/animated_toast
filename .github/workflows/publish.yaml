@@ -12,5 +12,6 @@ jobs:
     permissions:
       id-token: write 
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-    # with:
+    with:
+      environment: pub.dev
     #   working-directory: https://github.com/RichardM20/animated_toast

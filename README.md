@@ -2,6 +2,10 @@
 
 Animated Toast is a Flutter package that provides highly customizable and animated toast messages for your Flutter applications.
 
+## Preview
+
+https://github.com/user-attachments/assets/f8ee5890-3ca0-4463-b84b-9383e7b4023a
+
 ## 🚀 Features
 
 - 🎨 Fully customizable in appearance and behavior.
@@ -76,6 +80,7 @@ AnimatedToast.show(
 - `animationAlignment` *(optional)*: Animation start direction (default: `AnimatedToastStartOf.top`).
 - `style` *(optional)*: Custom style.
 - `duration` *(optional)*: Animation duration (default: `300ms`).
+- `onDismiss` *(optional)*: Callback that is called when the toast is dismissed.
 
 ## 🤝 Contributions
 

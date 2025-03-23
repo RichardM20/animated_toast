@@ -9,3 +9,10 @@
 ### Description
 
 - Internal adjustments with GitHub Actions.
+
+## 1.0.2
+
+### Description
+
+- onDimiss action added
+- example preview added

@@ -20,7 +20,7 @@ abstract class AnimatedToast {
   /// - [animationAlignment]: The alignment for the start of the animation. Defaults to [AnimatedToastStartOf.top].
   /// - [style]: An optional style for the toast.
   /// - [duration]: The duration for which the toast should be displayed. Defaults to 300 milliseconds.
-  ///
+  /// - [onDimiss]: An optional callback that is called when the toast is dismissed.
   /// Example usage:
   /// ```dart
   /// AnimatedToast.show(
@@ -39,6 +39,7 @@ abstract class AnimatedToast {
     AnimatedToastDuration duration = const AnimatedToastDuration(
       begin: Duration(milliseconds: 300),
     ),
+    void Function()? onDismiss,
   }) {
     final OverlayState overlay = Overlay.of(context);
     late OverlayEntry overlayEntry;
@@ -54,6 +55,7 @@ abstract class AnimatedToast {
           size: size,
           animationAlignment: animationAlignment,
           style: style,
+          onDismiss: onDismiss,
         );
       },
     );

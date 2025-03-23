@@ -17,6 +17,7 @@ class ToastWidget extends StatefulWidget {
     required this.animationAlignment,
     this.size,
     this.style,
+    this.onDismiss,
   });
 
   final OverlayEntry overlayEntry;
@@ -26,6 +27,7 @@ class ToastWidget extends StatefulWidget {
   final AnimatedToastDuration duration;
   final AnimatedToastStartOf animationAlignment;
   final AnimatedToastPosition position;
+  final void Function()? onDismiss;
 
   @override
   State<ToastWidget> createState() => _ToastWidgetState();
@@ -74,7 +76,11 @@ class _ToastWidgetState extends State<ToastWidget>
     setState(() {
       _isExpanded = true;
     });
-    _animationController.startExitAnimation(widget.overlayEntry.remove);
+
+    _animationController.startExitAnimation(() {
+      widget.overlayEntry.remove();
+      widget.onDismiss?.call();
+    });
   }
 
   @override

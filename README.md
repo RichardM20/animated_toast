@@ -16,7 +16,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_toast: ^1.0.0
+  animated_toast: <version>
 ```
 
 Then, run the following command to install the package:

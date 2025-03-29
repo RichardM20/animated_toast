@@ -4,7 +4,12 @@ Animated Toast is a Flutter package that provides highly customizable and animat
 
 ## Preview
 
-https://github.com/user-attachments/assets/f8ee5890-3ca0-4463-b84b-9383e7b4023a
+```markdown
+## Preview
+
+![AnimatedToast.show](https://github.com/user-attachments/assets/f8ee5890-3ca0-4463-b84b-9383e7b4023a)
+
+```
 
 ## 🚀 Features
 
@@ -69,7 +74,12 @@ AnimatedToast.show(
 );
 ```
 
-## 📌 `AnimatedToast.show` API
+## 📌 `AnimatedToast` API
+
+## Methods:
+
+- `AnimatedToast.show`: Displays an animated toast message 
+- `AnimatedToast.simpleAnimation`: Displays a simple animated toast message without the first animation.
 
 ### Parameters:
 

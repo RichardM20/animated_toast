@@ -1,6 +1,6 @@
 name: animated_toast
 description: "A Flutter package for displaying animated toast messages."
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/RichardM20/animated_toast
 homepage: https://github.com/RichardM20/animated_toast
 
@@ -11,7 +11,7 @@ platforms:
   macos:
   web:
   windows:
-  
+
 environment:
   sdk: ^3.7.0
   flutter: ">=1.17.0"
@@ -24,6 +24,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  
+topics:
+  - animated_toast
+  - toast
+  - flutter
+  - package
+  - animation
+  - snackbar
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

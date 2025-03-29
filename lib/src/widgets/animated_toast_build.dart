@@ -11,6 +11,7 @@ class AnimatedToastBodyBuild extends StatelessWidget {
     required this.messageData,
     required this.isExpanded,
     required this.margin,
+    required this.simpleAnimation,
     this.size,
     this.style,
   });
@@ -20,6 +21,7 @@ class AnimatedToastBodyBuild extends StatelessWidget {
   final AnimatedToastSize? size;
   final double margin;
   final AnimatedToastStyle? style;
+  final bool simpleAnimation;
 
   final _defaulLastSize = 44.0;
   final _defaultFirstSize = 84.0;
@@ -39,7 +41,6 @@ class AnimatedToastBodyBuild extends StatelessWidget {
 
     final containSubtitle = messageData.subtitle != null;
     double width = containSubtitle ? _defaultFirstSize : _defaulLastSize;
-
     return isExpanded ? MediaQuery.of(context).size.width * 0.8 : width;
   }
 

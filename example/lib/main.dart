@@ -42,10 +42,33 @@ class ToastExampleScreen extends StatelessWidget {
             onPressed: () => showLeftToast(context),
             child: Text('Show from left'),
           ),
+
+          ElevatedButton(
+            onPressed: () => showToastWithSimpleAnimation(context),
+            child: Text('showToastWithSimpleAnimation'),
+          ),
         ],
       ),
     );
   }
+}
+
+void showToastWithSimpleAnimation(BuildContext context) {
+  AnimatedToast.simpleAnimation(
+    context: context,
+    messageData: MessageData(
+      title: 'Success!',
+      subtitle: 'This is an auto close toast.',
+    ),
+    style: AnimatedToastStyle(
+      leadingData: AnimatedToastLeadingData(withoutIcon: true),
+    ),
+    animationAlignment: AnimatedToastStartOf.left,
+    duration: AnimatedToastDuration(
+      begin: Duration(milliseconds: 450),
+      displayDuration: Duration(seconds: 1),
+    ),
+  );
 }
 
 void showAutocloseToast(BuildContext context) {
@@ -54,6 +77,9 @@ void showAutocloseToast(BuildContext context) {
     messageData: MessageData(
       title: 'Success!',
       subtitle: 'This is an auto close toast.',
+    ),
+    style: AnimatedToastStyle(
+      boxDecoration: AnimatedToastBoxDecoration(color: Colors.white),
     ),
     duration: AnimatedToastDuration(
       begin: Duration(milliseconds: 600),

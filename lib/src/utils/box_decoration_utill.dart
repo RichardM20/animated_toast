@@ -10,7 +10,7 @@ class ToastBoxDecorationBuilder {
 
   static const double _defaultCollapsedBorderRadius = 100.0;
 
-  static const Color _defaultShadowColor = Color(0xFFEEEEEE);
+  static const Color _defaultShadowColor = Colors.black26;
 
   /// Default background color for the toast when not expanded
   static const Color _defaultInitialColor = Colors.blueAccent;
@@ -22,9 +22,9 @@ class ToastBoxDecorationBuilder {
   static final List<BoxShadow> _defaultBoxShadow = [
     const BoxShadow(
       color: _defaultShadowColor,
-      blurRadius: 2,
-      spreadRadius: 2,
-      offset: Offset.zero,
+      spreadRadius: 0,
+      blurRadius: 16,
+      offset: Offset(0, 8),
     ),
   ];
 

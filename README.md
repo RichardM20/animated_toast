@@ -4,12 +4,8 @@ Animated Toast is a Flutter package that provides highly customizable and animat
 
 ## Preview
 
-```markdown
-## Preview
+https://github.com/user-attachments/assets/f8ee5890-3ca0-4463-b84b-9383e7b4023a
 
-![AnimatedToast.show](https://github.com/user-attachments/assets/f8ee5890-3ca0-4463-b84b-9383e7b4023a)
-
-```
 
 ## 🚀 Features
 

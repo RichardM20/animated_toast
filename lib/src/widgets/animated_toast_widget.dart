@@ -15,6 +15,7 @@ class ToastWidget extends StatefulWidget {
     required this.position,
     required this.duration,
     required this.animationAlignment,
+    required this.simpleAnimation,
     this.size,
     this.style,
     this.onDismiss,
@@ -28,6 +29,7 @@ class ToastWidget extends StatefulWidget {
   final AnimatedToastStartOf animationAlignment;
   final AnimatedToastPosition position;
   final void Function()? onDismiss;
+  final bool simpleAnimation;
 
   @override
   State<ToastWidget> createState() => _ToastWidgetState();
@@ -48,9 +50,19 @@ class _ToastWidgetState extends State<ToastWidget>
       animationAlignment: widget.animationAlignment,
     );
 
+    if (widget.simpleAnimation) {
+      setExpandedState(true);
+    }
+
     _animationController.startEntryAnimation(_setupAutoDismiss);
 
     super.initState();
+  }
+
+  void setExpandedState(bool isExpanded) {
+    setState(() {
+      _isExpanded = isExpanded;
+    });
   }
 
   void _setupAutoDismiss() {
@@ -66,17 +78,11 @@ class _ToastWidgetState extends State<ToastWidget>
 
   void _onEntryAnimationComplete() {
     if (mounted) {
-      setState(() {
-        _isExpanded = true;
-      });
+      setExpandedState(true);
     }
   }
 
   void _closeToast() {
-    setState(() {
-      _isExpanded = true;
-    });
-
     _animationController.startExitAnimation(() {
       widget.overlayEntry.remove();
       widget.onDismiss?.call();
@@ -110,6 +116,7 @@ class _ToastWidgetState extends State<ToastWidget>
                 child: GestureDetector(
                   onTap: _closeToast,
                   child: AnimatedToastBodyBuild(
+                    simpleAnimation: widget.simpleAnimation,
                     margin: widget.position.spacing,
                     messageData: widget.messageData,
                     isExpanded: _isExpanded,

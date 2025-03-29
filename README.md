@@ -54,6 +54,16 @@ AnimatedToast.show(
 );
 ```
 
+```dart
+AnimatedToast.simpleAnimation(
+  context: context,
+  messageData: MessageData(
+    title: 'Success',
+    subtitle: 'Operation completed successfully.',
+  ),
+);
+```
+
 ### Advanced Options
 
 You can customize the position, style, and duration of the toast:
